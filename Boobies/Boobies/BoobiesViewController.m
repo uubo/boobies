@@ -7,7 +7,7 @@
 //
 
 #import "BoobiesViewController.h"
-#include "Deck.h"
+#include "BoobiesCardDeck.h"
 #include "CardMatchingGame.h"
 
 @interface BoobiesViewController ()
@@ -36,7 +36,12 @@
 
 - (Deck *)createDeck //abstract
 {
-    return nil;
+    return [[BoobiesCardDeck alloc] initWithImageNamesArray:[self validImageNames]];
+}
+
+- (NSArray *)validImageNames
+{
+    return @[];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender
