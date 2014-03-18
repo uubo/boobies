@@ -22,6 +22,9 @@
 		F502D3A718D86B0100F9F49D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F502D3A518D86B0100F9F49D /* InfoPlist.strings */; };
 		F502D3A918D86B0100F9F49D /* BoobiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F502D3A818D86B0100F9F49D /* BoobiesTests.m */; };
 		F502D3B318D86D9500F9F49D /* boroda in Resources */ = {isa = PBXBuildFile; fileRef = F502D3B218D86D9500F9F49D /* boroda */; };
+		F5B4DB2318D8789E00E9C11F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB1E18D8789E00E9C11F /* Card.m */; };
+		F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */; };
+		F5B4DB2518D8789E00E9C11F /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2218D8789E00E9C11F /* Deck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		F502D3A618D86B0100F9F49D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F502D3A818D86B0100F9F49D /* BoobiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoobiesTests.m; sourceTree = "<group>"; };
 		F502D3B218D86D9500F9F49D /* boroda */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boroda; sourceTree = "<group>"; };
+		F5B4DB1D18D8789E00E9C11F /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		F5B4DB1E18D8789E00E9C11F /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
+		F5B4DB1F18D8789E00E9C11F /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
+		F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
+		F5B4DB2118D8789E00E9C11F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
+		F5B4DB2218D8789E00E9C11F /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +123,7 @@
 		F502D38318D86B0100F9F49D /* Boobies */ = {
 			isa = PBXGroup;
 			children = (
-				F502D38C18D86B0100F9F49D /* BoobiesAppDelegate.h */,
-				F502D38D18D86B0100F9F49D /* BoobiesAppDelegate.m */,
+				F502D3B418D8765400F9F49D /*  Model */,
 				F502D38F18D86B0100F9F49D /* Main.storyboard */,
 				F502D39218D86B0100F9F49D /* BoobiesViewController.h */,
 				F502D39318D86B0100F9F49D /* BoobiesViewController.m */,
@@ -129,6 +137,8 @@
 		F502D38418D86B0100F9F49D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F502D38C18D86B0100F9F49D /* BoobiesAppDelegate.h */,
+				F502D38D18D86B0100F9F49D /* BoobiesAppDelegate.m */,
 				F502D38518D86B0100F9F49D /* Boobies-Info.plist */,
 				F502D38618D86B0100F9F49D /* InfoPlist.strings */,
 				F502D38918D86B0100F9F49D /* main.m */,
@@ -153,6 +163,19 @@
 				F502D3A518D86B0100F9F49D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F502D3B418D8765400F9F49D /*  Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4DB1D18D8789E00E9C11F /* Card.h */,
+				F5B4DB1E18D8789E00E9C11F /* Card.m */,
+				F5B4DB2118D8789E00E9C11F /* Deck.h */,
+				F5B4DB2218D8789E00E9C11F /* Deck.m */,
+				F5B4DB1F18D8789E00E9C11F /* CardMatchingGame.h */,
+				F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */,
+			);
+			name = " Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +279,10 @@
 			files = (
 				F502D38E18D86B0100F9F49D /* BoobiesAppDelegate.m in Sources */,
 				F502D38A18D86B0100F9F49D /* main.m in Sources */,
+				F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */,
 				F502D39418D86B0100F9F49D /* BoobiesViewController.m in Sources */,
+				F5B4DB2518D8789E00E9C11F /* Deck.m in Sources */,
+				F5B4DB2318D8789E00E9C11F /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +487,7 @@
 				F502D3AE18D86B0100F9F49D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F502D3AF18D86B0100F9F49D /* Build configuration list for PBXNativeTarget "BoobiesTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +496,7 @@
 				F502D3B118D86B0100F9F49D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
