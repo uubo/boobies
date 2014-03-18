@@ -22,6 +22,8 @@
 		F502D3A718D86B0100F9F49D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F502D3A518D86B0100F9F49D /* InfoPlist.strings */; };
 		F502D3A918D86B0100F9F49D /* BoobiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F502D3A818D86B0100F9F49D /* BoobiesTests.m */; };
 		F502D3B318D86D9500F9F49D /* boroda in Resources */ = {isa = PBXBuildFile; fileRef = F502D3B218D86D9500F9F49D /* boroda */; };
+		F516A1A918D8A27600DFB05C /* BoobiesCard.m in Sources */ = {isa = PBXBuildFile; fileRef = F516A1A818D8A27600DFB05C /* BoobiesCard.m */; };
+		F516A1AC18D8A3E900DFB05C /* BoobiesCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = F516A1AB18D8A3E900DFB05C /* BoobiesCardDeck.m */; };
 		F5B4DB2318D8789E00E9C11F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB1E18D8789E00E9C11F /* Card.m */; };
 		F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */; };
 		F5B4DB2518D8789E00E9C11F /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2218D8789E00E9C11F /* Deck.m */; };
@@ -58,6 +60,10 @@
 		F502D3A618D86B0100F9F49D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F502D3A818D86B0100F9F49D /* BoobiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoobiesTests.m; sourceTree = "<group>"; };
 		F502D3B218D86D9500F9F49D /* boroda */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boroda; sourceTree = "<group>"; };
+		F516A1A718D8A27600DFB05C /* BoobiesCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoobiesCard.h; path = Model/BoobiesCard.h; sourceTree = "<group>"; };
+		F516A1A818D8A27600DFB05C /* BoobiesCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoobiesCard.m; path = Model/BoobiesCard.m; sourceTree = "<group>"; };
+		F516A1AA18D8A3E900DFB05C /* BoobiesCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoobiesCardDeck.h; path = Model/BoobiesCardDeck.h; sourceTree = "<group>"; };
+		F516A1AB18D8A3E900DFB05C /* BoobiesCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoobiesCardDeck.m; path = Model/BoobiesCardDeck.m; sourceTree = "<group>"; };
 		F5B4DB1D18D8789E00E9C11F /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
 		F5B4DB1E18D8789E00E9C11F /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 		F5B4DB1F18D8789E00E9C11F /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
@@ -170,8 +176,12 @@
 			children = (
 				F5B4DB1D18D8789E00E9C11F /* Card.h */,
 				F5B4DB1E18D8789E00E9C11F /* Card.m */,
+				F516A1A718D8A27600DFB05C /* BoobiesCard.h */,
+				F516A1A818D8A27600DFB05C /* BoobiesCard.m */,
 				F5B4DB2118D8789E00E9C11F /* Deck.h */,
 				F5B4DB2218D8789E00E9C11F /* Deck.m */,
+				F516A1AA18D8A3E900DFB05C /* BoobiesCardDeck.h */,
+				F516A1AB18D8A3E900DFB05C /* BoobiesCardDeck.m */,
 				F5B4DB1F18D8789E00E9C11F /* CardMatchingGame.h */,
 				F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */,
 			);
@@ -277,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F516A1AC18D8A3E900DFB05C /* BoobiesCardDeck.m in Sources */,
+				F516A1A918D8A27600DFB05C /* BoobiesCard.m in Sources */,
 				F502D38E18D86B0100F9F49D /* BoobiesAppDelegate.m in Sources */,
 				F502D38A18D86B0100F9F49D /* main.m in Sources */,
 				F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */,
