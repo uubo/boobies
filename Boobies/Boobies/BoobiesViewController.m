@@ -41,7 +41,9 @@
 
 - (NSArray *)validImageNames
 {
-    return @[];
+    return @[@"tit1L", @"tit1R", @"tit2L", @"tit2R", @"tit3L", @"tit3R", @"tit4L", @"tit4R",
+             @"tit5L", @"tit5R", @"tit6L", @"tit6R", @"tit7L", @"tit7R", @"tit8L", @"tit8R",
+             @"tit9L", @"tit9R", @"tit10L", @"tit10R", @"tit11L", @"tit11R", @"tit12L", @"tit12R"];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender
