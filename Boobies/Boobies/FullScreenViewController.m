@@ -20,4 +20,9 @@
     self.imageView.image = [UIImage imageNamed:self.imageToShowName];
 }
 
+- (IBAction)backButtonTouched
+{
+    [self performSegueWithIdentifier:@"backToBoobies" sender:nil];
+}
+
 @end
