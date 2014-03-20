@@ -14,7 +14,12 @@
 {
     int score = 0;
     if ([otherCards count] == 1) {
-        if ([self.contents isEqualToString:[otherCards[0] contents]]) {
+        NSString *titId1 = [self.contents substringToIndex:self.contents.length - 1];
+        NSString *titId2 = [[otherCards[0] contents] substringToIndex:[[otherCards[0] contents] length] - 1];
+        NSString *titKind1 = [self.contents substringFromIndex:self.contents.length - 1];
+        NSString *titKind2 = [[otherCards[0] contents] substringFromIndex:[[otherCards[0] contents] length] - 1];
+        if ([titId1 isEqualToString:titId2] &&
+            ![titKind1 isEqualToString:titKind2]) {
             score = 1;
         }
     }

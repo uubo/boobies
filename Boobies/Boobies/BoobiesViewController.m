@@ -15,6 +15,7 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *winMessageLabel;
 @end
 
 @implementation BoobiesViewController
@@ -46,7 +47,9 @@
 
 - (NSArray *)validImageNames
 {
-    return @[];
+    return @[@"tit1L", @"tit1R", @"tit2L", @"tit2R", @"tit3L", @"tit3R", @"tit4L", @"tit4R",
+             @"tit5L", @"tit5R", @"tit6L", @"tit6R", @"tit7L", @"tit7R", @"tit8L", @"tit8R",
+             @"tit9L", @"tit9R", @"tit10L", @"tit10R", @"tit11L", @"tit11R", @"tit12L", @"tit12R"];
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender
@@ -65,12 +68,20 @@
                               forState:UIControlStateNormal];
         cardButton.enabled = !card.matched;
     }
+    [self winMessage];
+}
+
+- (void)winMessage
+{
+    if (self.game.gameFinished) {
+        self.winMessageLabel.text = @"You win!";
+    }
 }
 
 
 - (UIImage *)backgroundImageForCard:(Card *)card
 {
-    return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
+    return [UIImage imageNamed:card.isChosen ? card.contents : @"cardback"];
 }
 
 @end
