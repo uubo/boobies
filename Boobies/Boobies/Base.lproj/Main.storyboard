@@ -308,10 +308,31 @@
                         <outletCollection property="cardButtons" destination="6fk-ec-HYZ" id="mDp-6n-DZ8"/>
                         <outletCollection property="cardButtons" destination="QU8-cq-76n" id="hjg-39-lrI"/>
                         <outletCollection property="cardButtons" destination="OR0-z6-sTx" id="2z7-ol-5qu"/>
+                        <segue destination="gSk-io-0tb" kind="modal" identifier="fullScreen" id="fXz-QA-5GM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="51"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fGD-z6-BsK">
+            <objects>
+                <viewController id="gSk-io-0tb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b2k-6R-wOR"/>
+                        <viewControllerLayoutGuide type="bottom" id="P0G-od-3pK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXc-tG-Buu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cjN-gT-sgE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEg-qw-X3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="51"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

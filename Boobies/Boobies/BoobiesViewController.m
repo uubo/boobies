@@ -19,6 +19,11 @@
 
 @implementation BoobiesViewController
 
+- (void)viewDidLoad
+{
+    [self performSegueWithIdentifier:@"fullScreen" sender:nil];
+}
+
 - (CardMatchingGame *)game
 {
     if (!_game) {
