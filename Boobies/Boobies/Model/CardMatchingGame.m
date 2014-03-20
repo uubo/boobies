@@ -45,6 +45,7 @@
 - (void)chooseCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
+    int matchScore = 0;
     
     if (!card.isMatched) {
         if (card.isChosen) {
@@ -52,17 +53,20 @@
         } else {
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
-                    int matchScore = [card match:@[otherCard]];
+                    matchScore = [card match:@[otherCard]];
                     if (matchScore) {
                         card.matched = YES;
+                        otherCard.matched = YES;
+                    } else {
+                        otherCard.chosen = NO;
                     }
                     break;
                 }
             }
             card.chosen = YES;
-
         }
     }
+
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index

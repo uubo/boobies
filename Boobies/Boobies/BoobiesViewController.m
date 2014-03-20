@@ -67,7 +67,7 @@
 
 - (UIImage *)backgroundImageForCard:(Card *)card
 {
-    return [UIImage imageNamed:card.isChosen ? card.contents : nil];
+    return [UIImage imageNamed:card.isChosen ? card.contents : @"cardback"];
 }
 
 @end
