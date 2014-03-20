@@ -7,8 +7,10 @@
 //
 
 #import "BoobiesViewController.h"
-#include "BoobiesCardDeck.h"
-#include "CardMatchingGame.h"
+#import "FullScreenViewController.h"
+#import "BoobiesCard.h"
+#import "BoobiesCardDeck.h"
+#import "CardMatchingGame.h"
 
 @interface BoobiesViewController ()
 @property (strong, nonatomic) Deck *deck;
@@ -19,11 +21,6 @@
 @end
 
 @implementation BoobiesViewController
-
-- (void)viewDidLoad
-{
-    [self performSegueWithIdentifier:@"fullScreen" sender:nil];
-}
 
 - (CardMatchingGame *)game
 {
@@ -61,14 +58,34 @@
 
 - (void)updateUI
 {
+    BOOL justMatched = NO;
+    NSString *imageToShowFullScreen;
     for (int i = 0; i < [self.cardButtons count]; i++) {
         UIButton *cardButton = self.cardButtons[i];
         Card *card = [self.game cardAtIndex:i];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                               forState:UIControlStateNormal];
-        cardButton.enabled = !card.matched;
+        
+        if (cardButton.enabled && card.isMatched) {
+            justMatched = YES;
+            imageToShowFullScreen = [BoobiesCard nameId:card.contents];
+            cardButton.enabled = NO;
+        }
     }
     [self winMessage];
+    
+    if (justMatched) {
+        [self performSegueWithIdentifier:@"fullScreen"
+                                  sender:imageToShowFullScreen];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"fullScreen"]) {
+        FullScreenViewController *fsvc = (FullScreenViewController *)segue.destinationViewController;
+        fsvc.imageToShowName = (NSString *)sender;
+    }
 }
 
 - (void)winMessage

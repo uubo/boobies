@@ -14,16 +14,26 @@
 {
     int score = 0;
     if ([otherCards count] == 1) {
-        NSString *titId1 = [self.contents substringToIndex:self.contents.length - 1];
-        NSString *titId2 = [[otherCards[0] contents] substringToIndex:[[otherCards[0] contents] length] - 1];
-        NSString *titKind1 = [self.contents substringFromIndex:self.contents.length - 1];
-        NSString *titKind2 = [[otherCards[0] contents] substringFromIndex:[[otherCards[0] contents] length] - 1];
-        if ([titId1 isEqualToString:titId2] &&
-            ![titKind1 isEqualToString:titKind2]) {
+        NSString *tit1Id = [BoobiesCard nameId:self.contents];
+        NSString *tit2Id = [BoobiesCard nameId:[otherCards[0] contents]];
+        NSString *tit1Kind = [BoobiesCard nameKind:self.contents];
+        NSString *tit2Kind = [BoobiesCard nameKind:[otherCards[0] contents]];
+        if ([tit1Id isEqualToString:tit2Id] &&
+            ![tit1Kind isEqualToString:tit2Kind]) {
             score = 1;
         }
     }
     return score;
+}
+
++ (NSString *)nameId:(NSString *)name
+{
+    return [name substringToIndex:name.length - 1];
+}
+
++ (NSString *)nameKind:(NSString *)name
+{
+    return [name substringFromIndex:name.length - 1];
 }
 
 @end

@@ -296,22 +296,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="51"/>
+            <point key="canvasLocation" x="92" y="57"/>
         </scene>
-        <!--View Controller-->
+        <!--Full Screen View Controller-->
         <scene sceneID="fGD-z6-BsK">
             <objects>
-                <viewController id="gSk-io-0tb" sceneMemberID="viewController">
+                <viewController id="gSk-io-0tb" customClass="FullScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b2k-6R-wOR"/>
                         <viewControllerLayoutGuide type="bottom" id="P0G-od-3pK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cXc-tG-Buu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUL-g0-gXJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cjN-gT-sgE"/>
+                    <connections>
+                        <outlet property="imageView" destination="MUL-g0-gXJ" id="OHd-9P-ciP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEg-qw-X3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

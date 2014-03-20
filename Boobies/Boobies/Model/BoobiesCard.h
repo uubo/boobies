@@ -10,4 +10,7 @@
 
 @interface BoobiesCard : Card
 
++ (NSString *)nameId:(NSString *)name;
++ (NSString *)nameKind:(NSString *)name;
+
 @end

@@ -27,6 +27,7 @@
 		F5B4DB2318D8789E00E9C11F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB1E18D8789E00E9C11F /* Card.m */; };
 		F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */; };
 		F5B4DB2518D8789E00E9C11F /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B4DB2218D8789E00E9C11F /* Deck.m */; };
+		F5F952AD18DB58530013F2CE /* FullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F952AC18DB58530013F2CE /* FullScreenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		F5B4DB2018D8789E00E9C11F /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 		F5B4DB2118D8789E00E9C11F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
 		F5B4DB2218D8789E00E9C11F /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
+		F5F952AB18DB58530013F2CE /* FullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenViewController.h; sourceTree = "<group>"; };
+		F5F952AC18DB58530013F2CE /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				F502D38F18D86B0100F9F49D /* Main.storyboard */,
 				F502D39218D86B0100F9F49D /* BoobiesViewController.h */,
 				F502D39318D86B0100F9F49D /* BoobiesViewController.m */,
+				F5F952AB18DB58530013F2CE /* FullScreenViewController.h */,
+				F5F952AC18DB58530013F2CE /* FullScreenViewController.m */,
 				F502D39518D86B0100F9F49D /* Images.xcassets */,
 				F502D38418D86B0100F9F49D /* Supporting Files */,
 				F502D3B218D86D9500F9F49D /* boroda */,
@@ -289,6 +294,7 @@
 			files = (
 				F516A1AC18D8A3E900DFB05C /* BoobiesCardDeck.m in Sources */,
 				F516A1A918D8A27600DFB05C /* BoobiesCard.m in Sources */,
+				F5F952AD18DB58530013F2CE /* FullScreenViewController.m in Sources */,
 				F502D38E18D86B0100F9F49D /* BoobiesAppDelegate.m in Sources */,
 				F502D38A18D86B0100F9F49D /* main.m in Sources */,
 				F5B4DB2418D8789E00E9C11F /* CardMatchingGame.m in Sources */,

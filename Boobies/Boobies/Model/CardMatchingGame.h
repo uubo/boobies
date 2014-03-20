@@ -18,4 +18,6 @@
 
 - (Card *)cardAtIndex:(NSUInteger)index;
 
+@property (nonatomic, readonly) BOOL gameFinished;
+
 @end
