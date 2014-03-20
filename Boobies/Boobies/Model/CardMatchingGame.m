@@ -10,6 +10,7 @@
 
 @interface CardMatchingGame()
 @property (strong, nonatomic) NSMutableArray *cards; //of Card
+@property (nonatomic, readwrite) BOOL gameFinished;
 @end
 
 @implementation CardMatchingGame
@@ -66,7 +67,18 @@
             card.chosen = YES;
         }
     }
+    [self checkIfGameFinished];
+}
 
+- (void)checkIfGameFinished
+{
+    self.gameFinished = YES;
+    for (Card *card in self.cards) {
+        if (!card.isMatched) {
+            self.gameFinished = NO;
+            break;
+        }
+    }
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index

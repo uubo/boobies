@@ -256,9 +256,17 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TYS-Rm-Av7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBg-sf-2DD">
+                                <rect key="frame" x="20" y="207" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="winMessageLabel" destination="mBg-sf-2DD" id="IEj-4h-hIU"/>
                         <outletCollection property="cardButtons" destination="MQ5-f7-Xx2" id="J5E-m5-t2N"/>
                         <outletCollection property="cardButtons" destination="cu1-Z0-oPn" id="nSr-90-bUu"/>
                         <outletCollection property="cardButtons" destination="yR2-KJ-7oL" id="8XV-w5-qYo"/>

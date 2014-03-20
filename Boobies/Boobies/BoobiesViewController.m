@@ -15,6 +15,7 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *winMessageLabel;
 @end
 
 @implementation BoobiesViewController
@@ -61,6 +62,14 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                               forState:UIControlStateNormal];
         cardButton.enabled = !card.matched;
+    }
+    [self winMessage];
+}
+
+- (void)winMessage
+{
+    if (self.game.gameFinished) {
+        self.winMessageLabel.text = @"You win!";
     }
 }
 
